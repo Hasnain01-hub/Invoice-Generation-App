@@ -1,0 +1,99 @@
+name: invoice_gen
+description: A invoice generation app
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  cloud_firestore: any
+  cupertino_icons: ^1.0.0
+  flutter_launcher_icons: any
+  firebase_auth: 1.0.0
+  firebase_core: any
+  get: any
+  syncfusion_flutter_pdfviewer: ^19.2.55-beta
+  flutter_full_pdf_viewer: any
+  google_fonts: any
+  date_range_picker: ^1.0.5
+  flutter_form_builder: any
+  flutter_rounded_date_picker: any
+
+  sqflite: any
+  pdf: 3.0.0
+  ffi: any
+  firebase_analytics: any 
+  email_validator: any 
+  rflutter_alert: any 
+  permission_handler: 6.0.0
+  intl: any  
+  share: any 
+  firebase_messaging: any 
+  flutter_downloader: any 
+  dio: any 
+
+  ext_storage: any
+  downloads_path_provider: any 
+  open_file: any 
+  flutter_local_notifications: any  
+  awesome_dialog: any 
+
+  path_provider: any 
+  firebase_storage: any 
+  url_launcher: any 
+  uuid: any 
+  google_sign_in: any 
+  image_picker: any 
+  image_cropper: any 
+  provider: any 
+  geocoder: any 
+  geolocator: any 
+  flutter_staggered_grid_view: any 
+  nanoid: any 
+  
+  page_transition: any 
+  flutter_datetime_picker:
+    git:
+      url: https://github.com/Realank/flutter_datetime_picker.git
+      ref: master
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+#   flutter_native_splash: ^0.2.8
+
+# flutter_native_splash:
+#   color: "#3F51B5"
+#   image: assets/images/launch_image.png
+#   android: true
+#   ios: true
+
+#  integration_test: ^1.0.0
+#  sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
