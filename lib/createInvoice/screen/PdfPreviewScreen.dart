@@ -47,10 +47,7 @@ class _PdfPreviewScreenState extends State<PdfPreviewScreen> {
           icon: new Icon(Icons.arrow_back),
           onPressed: () {
             print("go to home page");
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => InvoiceBuilderListScreen()),
-            );
+            Navigator.of(context).pushReplacement(SlideRightRoute(page: InvoiceBuilderListScreen()));
           },
         ),
         title: Text("PDF Preview"),
