@@ -144,6 +144,7 @@ class _NavDrawerState extends State<NavDrawer> {
     );
     },
     ),
+      SizedBox(height: 1.0, child: Container(color: Colors.black)),
     ListTile(
     title: const Text('View Invoices'),
     onTap: () {
@@ -157,7 +158,7 @@ class _NavDrawerState extends State<NavDrawer> {
       // SizedBox(height: 300.0),
 
          SizedBox(height: 1.0, child: Container(color: Colors.black)),
-             exitWidget(context),
+             // exitWidget(context),
 
 
 
