@@ -45,7 +45,7 @@ class vehicleWidget extends StatelessWidget {
           ),
           TextFormField(
             controller: vehicleDetails.vehiclenoTxtCtrl,
-            maxLength: 20,
+            maxLength: 25,
             textDirection: TextDirection.ltr,
 
             decoration: InputDecoration(labelText: "Service type"),
@@ -67,7 +67,7 @@ class vehicleWidget extends StatelessWidget {
           ),
           TextFormField(
             controller: vehicleDetails.modelTxtCtrl,
-            maxLength: 80,
+            maxLength: 30,
             textDirection: TextDirection.ltr,
             decoration: InputDecoration(labelText: "Service Description"),
             validator: (String? value) {
@@ -87,7 +87,7 @@ class vehicleWidget extends StatelessWidget {
           ),
           TextFormField(
               controller: vehicleDetails.Notice,
-              maxLength: 20,
+              maxLength: 80,
               textDirection: TextDirection.ltr,
 
               decoration: InputDecoration(labelText: "Note"),

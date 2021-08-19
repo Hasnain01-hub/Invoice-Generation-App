@@ -125,7 +125,7 @@ class PdfTemplate {
               mainAxisAlignment: widgets.MainAxisAlignment.center,
               children: <widgets.Widget>[
                 widgets.Text(
-                  "Date Of Service: ",
+                  "Date Of Subscription: ",
                   style: widgets.TextStyle(
                     fontSize: 16.0,
                   ),
