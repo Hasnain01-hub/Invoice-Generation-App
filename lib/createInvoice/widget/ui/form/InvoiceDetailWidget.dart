@@ -134,8 +134,10 @@ class _InvoiceDetailWidgetState extends State<InvoiceDetailWidget> {
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             height: 30,
-            child: FlatButton(
-              textColor: Theme.of(context).primaryColor,
+            child: TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: () {
                 DatePicker.showDatePicker(
                   context,
@@ -236,8 +238,10 @@ class _InvoiceDetailWidgetState extends State<InvoiceDetailWidget> {
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             height: 30,
-            child: FlatButton(
-              textColor: Theme.of(context).primaryColor,
+            child: TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: () async {
                 final List<DateTime> picked = await DateRangePicker.showDatePicker(
                   context: context,

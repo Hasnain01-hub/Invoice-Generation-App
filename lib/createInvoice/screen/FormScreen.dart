@@ -288,8 +288,10 @@ class _FormScreenState extends State<FormScreen> {
             height: 40,
             width: double.infinity,
             // ignore: deprecated_member_use
-            child: FlatButton(
-              textColor: Colors.white,
+            child: TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: currentPagination != 1
                   ? () {
                       //prevent page to navigate, if there is error messages not handled
@@ -327,8 +329,10 @@ class _FormScreenState extends State<FormScreen> {
             height: 40,
             width: double.infinity,
             // ignore: deprecated_member_use
-            child: FlatButton(
-              textColor: Theme.of(context).primaryColor,
+            child: TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColor),
+              ),
               onPressed: () {
                 //prevent page to navigate, if there is error messages not handled
                 var checkValidationMsgs = checkValidationStatus();

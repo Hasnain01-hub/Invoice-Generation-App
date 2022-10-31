@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:firebase_storage/firebase_storage.dart';
@@ -10,9 +9,8 @@ import 'package:invoice_gen/view_Invoices/pdf_view.dart';
 
 import 'nav_drawer.dart';
 
-
 final CollectionReference invoiceRef =
-FirebaseFirestore.instance.collection('Invoices');
+    FirebaseFirestore.instance.collection('Invoices');
 String customerName = 'Customer Name : ';
 
 String customerPhone = 'Customer Phone : ';
@@ -36,11 +34,7 @@ class _viewInvoicesState extends State<viewInvoices> {
   void initState() {
     super.initState();
     fetchDatabaseList();
-      }
-
-
-
-
+  }
 
   fetchDatabaseList() async {
     dynamic resultant = await getsellCarList();
@@ -70,7 +64,7 @@ class _viewInvoicesState extends State<viewInvoices> {
                     Text(
                       'Delete Invoice',
                       style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     SizedBox(
                       height: 5,
@@ -101,8 +95,12 @@ class _viewInvoicesState extends State<viewInvoices> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         // ignore: deprecated_member_use
-                        RaisedButton(
-                          color: Colors.indigo,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.indigo,
+                            ),
+                          ),
                           child: Text(
                             "Yes",
                             style: TextStyle(color: Colors.white),
@@ -112,7 +110,7 @@ class _viewInvoicesState extends State<viewInvoices> {
                               invoiceRef.doc(id).delete();
                               try {
                                 final Reference storage =
-                                FirebaseStorage.instance.refFromURL(url);
+                                    FirebaseStorage.instance.refFromURL(url);
                                 storage.delete();
                               } catch (e) {
                                 print(e.toString());
@@ -127,8 +125,12 @@ class _viewInvoicesState extends State<viewInvoices> {
                           width: 20.0,
                         ),
                         // ignore: deprecated_member_use
-                        RaisedButton(
-                          color: Colors.indigo,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.indigo,
+                            ),
+                          ),
                           child: Text(
                             "No",
                             style: TextStyle(color: Colors.white),
@@ -204,14 +206,13 @@ class _viewInvoicesState extends State<viewInvoices> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
-                                            padding:
-                                            const EdgeInsets.only(left: 10.0),
+                                            padding: const EdgeInsets.only(
+                                                left: 10.0),
                                             child: Text(
                                               customerName +
                                                   ' ' +
                                                   userInvoiceList[index]
-                                                  ['Customer Name'],
-
+                                                      ['Customer Name'],
                                               style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 16.0,
@@ -224,14 +225,14 @@ class _viewInvoicesState extends State<viewInvoices> {
                                     ),
                                   ),
                                 ),
-
                                 SizedBox(
                                   height: 20.0,
                                 ),
                                 Column(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 10.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 10.0),
                                       child: Text(
                                         customerPhone +
                                             ' ' +
@@ -251,11 +252,11 @@ class _viewInvoicesState extends State<viewInvoices> {
                                     ),
                                   ],
                                 ),
-
                                 Column(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 10.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 10.0),
                                       child: Text(
                                         date +
                                             ' ' +
@@ -276,34 +277,39 @@ class _viewInvoicesState extends State<viewInvoices> {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0),
                                       // ignore: deprecated_member_use
-                                      child: RaisedButton(
-                                        color: Colors.indigo,
+                                      child: ElevatedButton(
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all<Color>(
+                                            Colors.indigo,
+                                          ),
+                                        ),
                                         onPressed: () {
                                           Navigator.push(
                                             context,
                                             PageRouteBuilder(
                                               transitionDuration:
-                                              Duration(seconds: 1),
-                                              transitionsBuilder:
-                                                  (context,
+                                                  Duration(seconds: 1),
+                                              transitionsBuilder: (context,
                                                   animation,
                                                   animationTime,
                                                   child) {
-                                                animation = CurvedAnimation(parent: animation, curve: Curves.elasticOut);
+                                                animation = CurvedAnimation(
+                                                    parent: animation,
+                                                    curve: Curves.elasticOut);
                                                 return ScaleTransition(
                                                   scale: animation,
                                                   child: child,
                                                 );
                                               },
-                                              pageBuilder: (context,
-                                                  animation,
+                                              pageBuilder: (context, animation,
                                                   animationTime) {
                                                 return viewPDF(
                                                   url: userInvoiceList[index]
-                                                  ['Url'],
+                                                      ['Url'],
                                                   customerName:
-                                                  userInvoiceList[index]
-                                                  ['Customer Name'],
+                                                      userInvoiceList[index]
+                                                          ['Customer Name'],
                                                 );
                                               },
                                             ),
@@ -323,8 +329,13 @@ class _viewInvoicesState extends State<viewInvoices> {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0),
                                       // ignore: deprecated_member_use
-                                      child: RaisedButton(
-                                        color: Colors.red,
+                                      child: ElevatedButton(
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all<Color>(
+                                            Colors.indigo,
+                                          ),
+                                        ),
                                         onPressed: () {
                                           setState(() {
                                             DeleteInvoice(

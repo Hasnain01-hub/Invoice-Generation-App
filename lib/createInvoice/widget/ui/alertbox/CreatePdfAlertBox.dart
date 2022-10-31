@@ -20,7 +20,7 @@ class CreatePdfAlertBox {
 
   static Widget _cancelButton({required BuildContext context}) {
     // ignore: deprecated_member_use
-    return FlatButton(
+    return TextButton(
       child: Text("Cancel"),
       onPressed: () {
         Navigator.of(context).pop();
@@ -30,7 +30,7 @@ class CreatePdfAlertBox {
 
   static Widget _pleaseWaitButton() {
     // ignore: deprecated_member_use
-    return FlatButton(
+    return TextButton(
       child: Text("Please Wait..."),
       onPressed: null,
     );
@@ -39,7 +39,7 @@ class CreatePdfAlertBox {
   static Widget _generalButton(
       {required BuildContext context, required String title, required Function onClick}) {
     // ignore: deprecated_member_use
-    return FlatButton(
+    return TextButton(
       child: Text(title),
       onPressed: () {
         onClick();

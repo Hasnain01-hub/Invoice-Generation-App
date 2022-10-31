@@ -30,7 +30,7 @@ class _ServiceDetailWidgetState extends State<ServiceDetailWidget> {
     } else {
       final snackBar =
           SnackBar(content: Text('Cannot Add More Than 8 Services !'));
-      Scaffold.of(context).showSnackBar(snackBar);
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
 

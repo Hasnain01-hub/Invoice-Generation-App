@@ -24,14 +24,14 @@ class ConfirmDeleteAlertBoxButton extends StatelessWidget {
   showAlertDialog({required BuildContext context, required Function deleteFunction, required PdfDB pdf}) {
     var result;
     // set up the buttons
-    Widget cancelButton = FlatButton(
+    Widget cancelButton = TextButton(
       child: Text("Cancel"),
       onPressed: () {
         Navigator.of(context).pop();
         deleteFunction(false, pdf);
       },
     );
-    Widget continueButton = FlatButton(
+    Widget continueButton = TextButton(
       child: Text("Continue"),
       onPressed: () {
         Navigator.of(context).pop();

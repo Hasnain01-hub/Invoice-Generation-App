@@ -5,7 +5,7 @@ class FieldValidationAlertBox {
   static showAlertDialog(BuildContext context,String errorMessage) {
 
     // set up the button
-    Widget okButton = FlatButton(
+    Widget okButton = TextButton(
       child: Text("OK"),
       onPressed: () {
         Navigator.of(context).pop();

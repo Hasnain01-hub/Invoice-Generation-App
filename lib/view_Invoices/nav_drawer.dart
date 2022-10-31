@@ -86,11 +86,14 @@ Future<bool> exit(BuildContext context) async{
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         // ignore: deprecated_member_use
-                        RaisedButton(
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.indigo,),
+                          ),
                           onPressed: () {
                             Navigator.pop(context, false);
                           },
-                          color: Colors.indigo,
+                          
                           child: Text(
                             'No',
                             style: TextStyle(color: Colors.white),
@@ -100,11 +103,13 @@ Future<bool> exit(BuildContext context) async{
                           width: 20.0,
                         ),
                         // ignore: deprecated_member_use
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {
                             SystemNavigator.pop();
                           },
-                          color: Colors.indigo,
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.indigo,),
+                          ),
                           child: Text(
                             'Yes',
                             style: TextStyle(color: Colors.white),
