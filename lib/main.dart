@@ -20,7 +20,18 @@ Future<void> main() async {
   }
   WidgetsFlutterBinding.ensureInitialized();
   await FlutterDownloader.initialize();
-  await Firebase.initializeApp();
+  if (Platform.isIOS) {
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyCsyWvf_YaUDwfzaNoM3VA_KieFURLGxzI",
+            appId: "1:725887509445:ios:17822b5429c5d7e6bb61ac",
+            messagingSenderId: "Your Sender id found in Firebase",
+            projectId: "invoice-58866"));
+  } else {
+    await Firebase.initializeApp();
+  }
+  // await FlutterDownloader.initialize();
+
 
   runApp(MyApp());
 }

@@ -47,24 +47,22 @@ dependencies:
   intl: any  
   share: any 
   firebase_messaging: any 
-  flutter_downloader: any 
+  flutter_downloader: any
   dio: any 
 
-  ext_storage: any
-  downloads_path_provider: any 
+  # ext_storage: any
+  # downloads_path_provider: any 
   open_file: any 
   flutter_local_notifications: any  
   awesome_dialog: any 
-
-  path_provider: any 
+  path_provider: any
   firebase_storage: any 
   url_launcher: any 
   uuid: any 
   google_sign_in: any 
   image_picker: any 
   image_cropper: any 
-  provider: any 
-  geocoder: any 
+  provider: any
   geolocator: any 
   flutter_staggered_grid_view: any 
   nanoid: any 
